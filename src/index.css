@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bone: #f4f1ea;
+    --cream: #ebe6da;
+    --ink: #0a0a0a;
+    --acid: #d6ff3d;
+    --ember: #ff4d2e;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #root {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: auto; /* handled by Lenis */
+  }
+
+  body {
+    background: var(--bone);
+    color: var(--ink);
+    font-family: "Satoshi", "Neue Montreal", Inter, system-ui, sans-serif;
+    overflow-x: hidden;
+    cursor: auto;
+  }
+
+  ::selection {
+    background: var(--ink);
+    color: var(--acid);
+  }
+
+  /* hide default cursor on devices with fine pointer (custom cursor takes over) */
+  @media (hover: hover) and (pointer: fine) {
+    body.has-custom-cursor,
+    body.has-custom-cursor * {
+      cursor: none !important;
+    }
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 9px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bone);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0a0a0a;
+    border: 3px solid var(--bone);
+    border-radius: 99px;
+  }
+}
+
+@layer components {
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.04;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* generous editorial container */
+  .container-x {
+    @apply mx-auto w-full max-w-[1600px] px-5 sm:px-8 lg:px-14;
+  }
+
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-[0.28em] text-ink/55;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .stroke-text {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(10, 10, 10, 0.85);
+  }
+
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@layer utilities {
+  .edge-bleed {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  .perspective {
+    perspective: 1200px;
+  }
+}
