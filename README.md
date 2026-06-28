@@ -1,74 +1,70 @@
-# Krisna Santosa — Portfolio
+# Krisna Santosa
 
-A high-craft, editorial-grade personal portfolio for **Krisna Santosa** —
-Full-Stack Developer & Machine Learning Engineer.
+**Full-Stack Developer & Machine Learning Engineer**  
+📍 Garut, West Java, Indonesia | 📧 [mamang.krisna15@gmail.com](mailto:mamang.krisna15@gmail.com) | 🔗 [LinkedIn](https://linkedin.com/in/krisna-santosa) | 💻 [Portfolio Site](https://krisnasantosa15.github.io)
 
-Built with **React + Vite + Tailwind + Framer Motion + Lenis**. Fully static —
-deploys to GitHub Pages with no backend required.
+> "Code that scales. Models that learn. Interfaces people actually want to use."
 
-## Develop
+---
 
-```bash
-npm install
-npm run dev      # http://localhost:5173
-```
+## 🚀 About Me
 
-## Build
+I am a Computer Science undergraduate at the **Indonesia University of Education (UPI)**, specializing in Full-Stack Web Development and Machine Learning. 
 
-```bash
-npm run build    # outputs /dist
-npm run preview  # preview the production build locally
-```
+* **5+ Years of Full-Stack Web Development:** Hooked on programming since vocational high school, building robust, high-performance web systems using React, Next.js, Laravel, and modern database architectures.
+* **3+ Years of Machine Learning & Computer Vision:** Focused on developing practical AI solutions (LLMs, computer vision, hand landmark tracking, and NLP) and deploying them into production using end-to-end MLOps (TFX, Docker, TF Serving).
+* **Bangkit Academy 2024 Graduate:** Graduated with Distinction (Top 10% of cohort) in the Machine Learning path.
 
-## Editing content
+---
 
-All content lives in **`src/data/`** — edit these files to update the site:
+## 📊 Core Statistics & Highlights
 
-| File | What it controls |
+- **26+** Projects shipped (AR, Web Apps, ML Models, Data Analytics)
+- **32+** Awards and certifications
+- **2nd Place Winner** at the National Student Digital Innovation Competition (**LIDM 2024**) at IPB University (Digital Education Technology category)
+- **2nd Place Winner** at the **Bandung Bedas Innovation Competition (KIBB 2024)**
+
+---
+
+## 🛠️ Tech Stack & Expertise
+
+| Category | Technologies |
 |---|---|
-| `profile.js` | Name, role, bio, location, stats, contact info, social links, resume URL |
-| `projects.js` | All 26 projects (title, summary, description, category, tech, metrics, links) |
-| `skills.js` | All ~52 skills (name, category, proficiency, years) |
-| `experience.js` | Work history + education timeline |
-| `awards.js` | Awards (8) + certifications (24) |
+| **Languages** | Python, JavaScript (ES6+), PHP, SQL, HTML5/CSS3 |
+| **Web Development** | React, Next.js, Node.js, Laravel, TailwindCSS, Bootstrap 5, Prisma |
+| **Machine Learning** | TensorFlow, Keras, PyTorch, MediaPipe, OpenCV, Scikit-Learn, NLTK |
+| **MLOps & DevOps** | TFX (TensorFlow Extended), TensorFlow Serving, Docker, Prometheus, Grafana |
+| **Databases & Cloud** | PostgreSQL, MySQL, Railway, Hostinger, Git/GitHub |
 
-Drop a new resume into `public/resume.pdf` (referenced as `/resume.pdf`).
+---
 
-## Deploy to GitHub Pages
+## 🏆 Featured Projects
 
-This site is configured for a **user/organization page** at the domain root
-(`https://<username>.github.io/`), **not** a project subpath.
+### 📱 [SILAR: Sign Language Augmented Reality](https://www.linkedin.com/posts/krisna-santosa_lidm2024-digitalinnovation-ar-activity-7237514674529779713-i7rm)
+*An innovative AR-based mobile application to help children learn sign language interactively.*
+* **Role:** Team Lead & Developer
+* **Tech:** Unity, Vuforia, React, Next.js, Google Auth
+* **Achievement:** **2nd Place · LIDM 2024** (National level)
 
-### One-time setup
+### 🏥 [CEKREK BEDAS: Autism Assessment Platform](https://github.com/KrisnaSantosa15/cekrek)
+*An AI-powered assessment and behavior monitoring platform designed for educators in Special Education Schools (SLB).*
+* **Tech:** Next.js, MySQL, TailwindCSS, Prisma, RadixUI, Google Auth
+* **Achievement:** **2nd Place · Bandung Bedas Innovation Competition (KIBB 2024)**
 
-1. Create (or rename) the repository to exactly **`krisnasantosa15.github.io`**
-   — GitHub serves a repo named `<username>.github.io` from the root of
-   `https://<username>.github.io/`.
-2. Push this folder to the `main` branch of that repo.
-3. In the repo: **Settings → Pages → Build and deployment → Source**, select
-   **"GitHub Actions"**.
+### 🤟 [Real-time BISINDO Alphabet Classification](https://realtime-bisindo-classification.streamlit.app/)
+*A computer vision model classifying the Indonesian Sign Language (BISINDO) alphabet in real time with high accuracy.*
+* **Tech:** SciKit-Learn, MediaPipe, OpenCV, Streamlit, Python
+* **Demo:** [BISINDO Streamlit App](https://realtime-bisindo-classification.streamlit.app/)
 
-### How it deploys
+### ⚙️ [End-to-End Sleep Disorder Prediction System](https://github.com/KrisnaSantosa15/sleep-disorder-prediction)
+*A complete MLOps pipeline predicting sleep disorders (Insomnia, Sleep Apnea, or None) from lifestyle indicators, deployed in production.*
+* **Tech:** Docker, TFX, Keras Tuner, TF Serving, Grafana, Prometheus, Railway
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which:
-- Installs deps (`npm ci`), builds (`npm run build`)
-- Uploads `dist/` and deploys it via `actions/deploy-pages`
+---
 
-The workflow handles everything automatically — no `gh-pages` branch, no manual
-publish step.
+## 📫 Get in Touch
 
-### Why `base: '/'`?
-
-`vite.config.js` sets `base: '/'` so built assets resolve from the domain root.
-If you ever move the site to a project subpath
-(`https://<username>.github.io/<repo>/`), change `base` to `'/<repo>/'`.
-
-## Tech & design
-
-- **Vite + React** — fast SPA, no routing (single scroll page)
-- **TailwindCSS** — design tokens (ink/bone/acid/ember palette, editorial type scale)
-- **Framer Motion** — kinetic typography, scroll reveals, layout animations
-- **Lenis** — smooth scrolling, synced to all animations
-- **Custom cursor** — blended dot + spring-trailing ring with contextual labels
-- **Generated SVG covers** — each project gets a category-aware abstract cover
-  (neural-net motifs for ML, layout grids for web, charts for data, terminals for others)
+* **Email:** [mamang.krisna15@gmail.com](mailto:mamang.krisna15@gmail.com)
+* **LinkedIn:** [/krisna-santosa](https://linkedin.com/in/krisna-santosa)
+* **WhatsApp:** [+62 813-1801-2627](https://wa.me/6281318012627)
+* **Instagram:** [@krisna.santosa_15](https://instagram.com/krisna.santosa_15)
