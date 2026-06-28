@@ -154,7 +154,7 @@ function ProjectCard({ project, index, colSpanClass }) {
       >
         {/* Cover */}
         <div className="absolute inset-0" style={{ background: color }}>
-          <Cover project={project} color={color} textOnDark={textOnDark} />
+          <Cover project={project} textOnDark={textOnDark} />
         </div>
 
         {/* Gradient for legibility */}
@@ -265,7 +265,7 @@ function ProjectCard({ project, index, colSpanClass }) {
 /**
  * Category-aware generated SVG covers.
  */
-function Cover({ project, color, textOnDark }) {
+function Cover({ project, textOnDark }) {
   const cls = "absolute inset-0 h-full w-full";
   const seed = project.id * 7; // deterministic variation per project
   const title = project.title.split(":")[0].split(" ")[0].slice(0, 8);

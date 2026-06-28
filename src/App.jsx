@@ -1,4 +1,3 @@
-import { useState } from "react";
 import SmoothScroll from "./components/SmoothScroll";
 import Cursor from "./components/Cursor";
 import Nav from "./components/Nav";

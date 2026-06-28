@@ -66,7 +66,12 @@ function backdropLuminanceAt(el) {
 }
 
 export default function Cursor() {
-  const [enabled, setEnabled] = useState(false);
+  const [enabled] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    }
+    return false;
+  });
   const [label, setLabel] = useState("");
   const [hovering, setHovering] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -83,9 +88,7 @@ export default function Cursor() {
   const lastTarget = useRef(null);
 
   useEffect(() => {
-    const fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-    if (!fine) return;
-    setEnabled(true);
+    if (!enabled) return;
     document.body.classList.add("has-custom-cursor");
 
     const move = (e) => {
@@ -126,7 +129,7 @@ export default function Cursor() {
       document.removeEventListener("mouseenter", enter);
       document.body.classList.remove("has-custom-cursor");
     };
-  }, [x, y]);
+  }, [enabled, x, y]);
 
   if (!enabled) return null;
 

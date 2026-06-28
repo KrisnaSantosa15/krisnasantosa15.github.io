@@ -3,9 +3,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import RevealText from "../components/RevealText";
 import Magnetic from "../components/Magnetic";
 import { profile } from "../data/profile";
-
-const ease = [0.16, 1, 0.3, 1];
-
 export default function Contact() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
